@@ -26,7 +26,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDonate, onOpenVolunteer }) => 
             </div>
 
             {/* Big Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#0A192F] tracking-tight leading-[1.15] font-heading">
+            <h1 
+              spellCheck={false}
+              className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#0A192F] tracking-tight leading-[1.15] font-heading"
+            >
               Touching <span className="text-[#C51E2E]">Lives.</span><br />
               Empowering <span className="text-[#D97706]">Citizens.</span><br />
               Transforming <span className="text-[#0A192F] underline decoration-[#C51E2E]/40 decoration-wavy decoration-2">Society.</span>
