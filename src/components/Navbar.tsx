@@ -51,9 +51,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDonate }) => {
           className="flex items-center gap-2.5 group focus:outline-none"
           onClick={(e) => handleNavClick(e, '#home')}
         >
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-[#C51E2E] to-[#8E111E] flex items-center justify-center shadow-md shadow-rose-900/20 group-hover:scale-105 transition-transform">
-            <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-white fill-white animate-heart-pulse" />
-          </div>
+          <img
+            src="/images/ohf-logo.svg"
+            alt="Oche's Heart Foundation (OHF) Logo"
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl shadow-md shadow-slate-900/15 group-hover:scale-105 transition-transform shrink-0"
+          />
           <div className="flex flex-col">
             <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-[#0A192F] group-hover:text-[#C51E2E] transition-colors leading-tight">
               Oche's Heart
