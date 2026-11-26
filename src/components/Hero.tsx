@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDonate, onOpenVolunteer }) => 
             >
               Touching <span className="text-[#C51E2E]">Lives.</span><br />
               Empowering <span className="text-[#D97706]">Citizens.</span><br />
-              Transforming <span className="text-[#0A192F] underline decoration-[#C51E2E]/40 decoration-wavy decoration-2">Society.</span>
+              Transforming <span className="text-[#0A192F]">Society.</span>
             </h1>
 
             {/* Subtext */}
