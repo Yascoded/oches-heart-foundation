@@ -1,42 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Oche's Heart Foundation (OHF) Logo">
-  <defs>
-    <linearGradient id="ohf-navy-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F2442" />
-      <stop offset="100%" stop-color="#0A192F" />
-    </linearGradient>
-    <linearGradient id="ohf-heart-accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E63946" />
-      <stop offset="55%" stop-color="#C51E2E" />
-      <stop offset="100%" stop-color="#D97706" />
-    </linearGradient>
-  </defs>
-
-  <!-- Deep Navy Rounded Badge -->
-  <rect x="4" y="4" width="112" height="112" rx="26" fill="url(#ohf-navy-bg)" />
-  <rect x="6" y="6" width="108" height="108" rx="24" fill="none" stroke="url(#ohf-heart-accent)" stroke-opacity="0.35" stroke-width="1.5" />
-
-  <!-- Subtle Heart Icon -->
-  <path
-    d="M60 55 C60 55 39 42 39 30 C39 23 44.5 18 51 18 C55.2 18 58.6 20.4 60 23.5 C61.4 20.4 64.8 18 69 18 C75.5 18 81 23 81 30 C81 42 60 55 60 55 Z"
-    fill="url(#ohf-heart-accent)"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 96" role="img" aria-label="Oche's Heart Foundation (OHF) Badge">
+  <rect x="2" y="2" width="112" height="92" rx="20" fill="#0A192F" />
+  <rect
+    x="3.25"
+    y="3.25"
+    width="109.5"
+    height="89.5"
+    rx="18.8"
+    fill="none"
+    stroke="rgba(255, 255, 255, 0.18)"
+    stroke-width="1.5"
   />
-
-  <!-- Bold Geometric OHF Typography -->
-  <g fill="#FFFFFF">
-    <!-- O -->
-    <rect x="23.5" y="69.5" width="18" height="23" rx="9" fill="none" stroke="#FFFFFF" stroke-width="6.5" />
-
-    <!-- H -->
-    <rect x="50.5" y="66.25" width="6.5" height="29.5" rx="1.5" />
-    <rect x="66" y="66.25" width="6.5" height="29.5" rx="1.5" />
-    <rect x="50.5" y="77.75" width="22" height="6.5" />
-
-    <!-- F -->
-    <rect x="79.5" y="66.25" width="6.5" height="29.5" rx="1.5" />
-    <rect x="79.5" y="66.25" width="20.5" height="6.5" rx="1.5" />
-    <rect x="79.5" y="77.75" width="15.5" height="6.5" rx="1.5" />
+  <g transform="translate(0, 1.5)">
+    <path
+      d="M 29.5 62 C 18.5 55 13 46.5 13 38 C 13 31 18.5 26 24.8 26 C 28.2 26 30.2 27.8 31.2 30.4 C 32.2 27.8 34.2 26 37.6 26 C 43.2 26 47.6 30.5 47.6 37.2 C 47.6 39.2 47.1 41.1 46.2 42.8"
+      fill="none"
+      stroke="#E84C3D"
+      stroke-width="5.2"
+      stroke-linecap="butt"
+      stroke-linejoin="round"
+    />
+    <rect
+      x="25.8"
+      y="35.6"
+      width="9.6"
+      height="12.2"
+      rx="4.8"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="3.3"
+    />
+    <path
+      d="M 23.5 68.5 C 32.5 72.5 39.5 65.5 44.5 57.5 C 47.5 52.8 50.5 50.5 55.5 50.5 L 72.5 50.5"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="5.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <g fill="#FFFFFF">
+      <rect x="52.5" y="27" width="5.6" height="26" rx="1.1" />
+      <rect x="52.5" y="59" width="5.6" height="14.5" rx="1.1" />
+      <rect x="70" y="27" width="5.6" height="46.5" rx="1.1" />
+      <rect x="82.5" y="27" width="5.6" height="46.5" rx="1.1" />
+      <rect x="82.5" y="27" width="21" height="5.6" rx="1.1" />
+      <rect x="82.5" y="47" width="16.8" height="5.4" rx="1.1" />
+    </g>
   </g>
-
-  <!-- Subtle Warm Accent Underline -->
-  <rect x="20" y="103" width="80" height="3" rx="1.5" fill="url(#ohf-heart-accent)" opacity="0.9" />
 </svg>

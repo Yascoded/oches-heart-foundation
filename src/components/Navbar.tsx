@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, Menu, X, ArrowUpRight } from 'lucide-react';
+import { OhfFullLogo, OhfLogoStyles } from './OhfFlagshipLogo';
 
 interface NavbarProps {
   onOpenDonate: () => void;
@@ -45,25 +46,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDonate }) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <OhfLogoStyles />
         {/* Logo */}
         <a
           href="#home"
-          className="flex items-center gap-2.5 group focus:outline-none"
+          className="flex items-center group focus:outline-none"
           onClick={(e) => handleNavClick(e, '#home')}
+          aria-label="Oche's Heart Foundation Home"
         >
-          <img
-            src="/images/ohf-logo.svg"
-            alt="Oche's Heart Foundation (OHF) Logo"
-            className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl shadow-md shadow-slate-900/15 group-hover:scale-105 transition-transform shrink-0"
+          <OhfFullLogo
+            variant="light"
+            animated={true}
+            className="h-10 sm:h-11 w-auto shrink-0"
+            idPrefix="navbar-ohf"
           />
-          <div className="flex flex-col">
-            <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-[#0A192F] group-hover:text-[#C51E2E] transition-colors leading-tight">
-              Oche's Heart
-            </span>
-            <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#C51E2E]">
-              Foundation
-            </span>
-          </div>
         </a>
 
         {/* Desktop Navigation Links */}
