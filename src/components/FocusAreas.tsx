@@ -79,18 +79,18 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenDonate }) => {
   ];
 
   return (
-    <section id="focus" className="py-20 md:py-28 bg-[#FFFDF9] relative">
+    <section id="focus" className="py-20 md:py-28 bg-[#FFFDF9] dark:bg-[#0A192F] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-amber-100 text-[#D97706]">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-amber-100 dark:bg-amber-400/15 text-[#D97706] dark:text-amber-300">
             What We Do
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A192F] tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A192F] dark:text-[#F8FAFC] tracking-tight font-heading">
             Our 6 Core Areas of Focus
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-[#CBD5E1] leading-relaxed">
             Every initiative at Oche's Heart Foundation is tailored to meet immediate humanitarian crises while building enduring structures for civic freedom and prosperity.
           </p>
         </div>
@@ -102,10 +102,10 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenDonate }) => {
             return (
               <div
                 key={item.id}
-                className="group relative bg-[#FAF7F2] rounded-3xl overflow-hidden border border-slate-200/80 hover:border-[#C51E2E]/40 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1.5"
+                className="group relative bg-[#FAF7F2] dark:bg-[#112240] rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 hover:border-[#C51E2E]/40 dark:hover:border-[#E84C3D]/50 shadow-md dark:shadow-black/30 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1.5"
               >
                 {/* Image Header with Tag */}
-                <div className="relative h-48 w-full overflow-hidden bg-slate-200">
+                <div className="relative h-48 w-full overflow-hidden bg-slate-200 dark:bg-[#1D3557]">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -114,12 +114,12 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenDonate }) => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   
-                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-slate-800 shadow-sm">
+                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/90 dark:bg-[#0A192F]/90 backdrop-blur-sm text-slate-800 dark:text-[#F8FAFC] border border-transparent dark:border-white/15 shadow-sm">
                     {item.tag}
                   </span>
 
                   {/* Icon Badge */}
-                  <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-white text-[#C51E2E] shadow-lg flex items-center justify-center group-hover:bg-[#C51E2E] group-hover:text-white transition-colors duration-300">
+                  <div className="absolute bottom-4 left-4 w-12 h-12 rounded-2xl bg-white dark:bg-[#1D3557] text-[#C51E2E] dark:text-[#E84C3D] border border-transparent dark:border-white/15 shadow-lg flex items-center justify-center group-hover:bg-[#C51E2E] dark:group-hover:bg-[#E84C3D] group-hover:text-white transition-colors duration-300">
                     <Icon className="w-6 h-6" />
                   </div>
                 </div>
@@ -127,13 +127,13 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenDonate }) => {
                 {/* Card Content */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-2">
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#0A192F] font-heading group-hover:text-[#C51E2E] transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#0A192F] dark:text-[#F8FAFC] font-heading group-hover:text-[#C51E2E] dark:group-hover:text-[#F05A4B] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-slate-700 font-medium text-sm sm:text-base leading-relaxed">
+                    <p className="text-slate-700 dark:text-[#CBD5E1] font-medium text-sm sm:text-base leading-relaxed">
                       {item.description}
                     </p>
-                    <p className="text-slate-500 text-xs sm:text-sm leading-normal pt-1 border-t border-slate-200/60">
+                    <p className="text-slate-500 dark:text-[#94A3B8] text-xs sm:text-sm leading-normal pt-1 border-t border-slate-200/60 dark:border-white/10">
                       {item.details}
                     </p>
                   </div>
@@ -142,7 +142,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenDonate }) => {
                   <div className="pt-2">
                     <button
                       onClick={onOpenDonate}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C51E2E] hover:text-[#991321] transition-colors"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C51E2E] hover:text-[#991321] dark:text-[#E84C3D] dark:hover:text-[#F05A4B] transition-colors cursor-pointer"
                     >
                       <span>Support This Cause</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -155,7 +155,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenDonate }) => {
         </div>
 
         {/* Bottom Banner within Focus */}
-        <div className="mt-16 rounded-3xl bg-gradient-to-r from-[#0A192F] via-[#152544] to-[#C51E2E] p-8 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-16 rounded-3xl bg-gradient-to-r from-[#0A192F] via-[#152544] to-[#C51E2E] dark:from-[#112240] dark:via-[#1D3557] dark:to-[#E84C3D] p-8 sm:p-10 text-white shadow-xl border border-transparent dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <h4 className="text-2xl sm:text-3xl font-bold font-heading">
               Have a grassroots project in need of partnership?

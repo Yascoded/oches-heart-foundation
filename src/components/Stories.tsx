@@ -37,19 +37,19 @@ export const Stories: React.FC<StoriesProps> = ({ onOpenDonate }) => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#FAF7F2] relative border-b border-rose-100/60">
+    <section className="py-20 md:py-28 bg-[#FAF7F2] dark:bg-[#0D1E38] relative border-b border-rose-100/60 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-rose-100 text-[#C51E2E]">
-            <Heart className="w-3.5 h-3.5 fill-[#C51E2E]" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-rose-100 dark:bg-[#E84C3D]/15 text-[#C51E2E] dark:text-[#F05A4B]">
+            <Heart className="w-3.5 h-3.5 fill-[#C51E2E] dark:fill-[#E84C3D]" />
             Stories of Hope
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A192F] tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A192F] dark:text-[#F8FAFC] tracking-tight font-heading">
             Voices From The Field
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-[#CBD5E1] leading-relaxed">
             Behind every number is a human life restored, a family nourished, and an informed citizen standing tall for democracy.
           </p>
         </div>
@@ -59,11 +59,11 @@ export const Stories: React.FC<StoriesProps> = ({ onOpenDonate }) => {
           {stories.map((story) => (
             <div
               key={story.title}
-              className="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1"
+              className="bg-white dark:bg-[#112240] rounded-3xl overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-lg dark:shadow-black/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1"
             >
               <div>
                 {/* Image */}
-                <div className="relative h-52 w-full overflow-hidden bg-slate-100">
+                <div className="relative h-52 w-full overflow-hidden bg-slate-100 dark:bg-[#1D3557]">
                   <img
                     src={story.image}
                     alt={story.title}
@@ -71,7 +71,7 @@ export const Stories: React.FC<StoriesProps> = ({ onOpenDonate }) => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/95 text-slate-800 shadow-sm">
+                  <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/95 dark:bg-[#0A192F]/90 text-slate-800 dark:text-[#F8FAFC] border border-transparent dark:border-white/15 shadow-sm">
                     {story.category}
                   </span>
                   <span className="absolute bottom-3 left-4 text-xs font-semibold text-amber-300">
@@ -81,13 +81,13 @@ export const Stories: React.FC<StoriesProps> = ({ onOpenDonate }) => {
 
                 {/* Content */}
                 <div className="p-6 sm:p-7 space-y-4">
-                  <h3 className="text-xl font-bold text-[#0A192F] font-heading leading-snug">
+                  <h3 className="text-xl font-bold text-[#0A192F] dark:text-[#F8FAFC] font-heading leading-snug">
                     {story.title}
                   </h3>
 
                   <div className="relative pt-2">
-                    <Quote className="w-8 h-8 text-rose-200/80 absolute -top-1 -left-2 -z-0" />
-                    <p className="relative text-slate-600 text-sm leading-relaxed italic z-10">
+                    <Quote className="w-8 h-8 text-rose-200/80 dark:text-[#E84C3D]/25 absolute -top-1 -left-2 -z-0" />
+                    <p className="relative text-slate-600 dark:text-[#CBD5E1] text-sm leading-relaxed italic z-10">
                       "{story.quote}"
                     </p>
                   </div>
@@ -95,11 +95,11 @@ export const Stories: React.FC<StoriesProps> = ({ onOpenDonate }) => {
               </div>
 
               {/* Author Footer */}
-              <div className="px-6 pb-6 pt-2 border-t border-slate-100">
-                <div className="text-sm font-bold text-slate-900 font-heading">
+              <div className="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-white/10">
+                <div className="text-sm font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
                   {story.author}
                 </div>
-                <div className="text-xs text-slate-500">
+                <div className="text-xs text-slate-500 dark:text-[#94A3B8]">
                   {story.role}
                 </div>
               </div>
@@ -111,7 +111,7 @@ export const Stories: React.FC<StoriesProps> = ({ onOpenDonate }) => {
         <div className="text-center">
           <button
             onClick={onOpenDonate}
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold bg-[#D97706] hover:bg-[#B45309] text-white shadow-lg shadow-amber-600/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-sm"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl font-bold bg-[#D97706] hover:bg-[#B45309] dark:bg-[#E84C3D] dark:hover:bg-[#F05A4B] text-white shadow-lg shadow-amber-600/25 dark:shadow-[#E84C3D]/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-sm cursor-pointer"
           >
             <Heart className="w-4 h-4 fill-white" />
             <span>Help Us Write More Success Stories</span>

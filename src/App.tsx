@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -17,6 +17,44 @@ export const App: React.FC = () => {
   const [donateOpen, setDonateOpen] = useState(false);
   const [volunteerOpen, setVolunteerOpen] = useState(false);
   const [volunteerType, setVolunteerType] = useState<'volunteer' | 'partner'>('volunteer');
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof document !== 'undefined') {
+      return document.documentElement.classList.contains('dark');
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.toggle('dark', isDark);
+  }, [isDark]);
+
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      try {
+        if (!localStorage.getItem('ohf-theme')) {
+          setIsDark(e.matches);
+        }
+      } catch {
+        setIsDark(e.matches);
+      }
+    };
+    media.addEventListener('change', handleChange);
+    return () => media.removeEventListener('change', handleChange);
+  }, []);
+
+  const handleToggleTheme = () => {
+    setIsDark((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem('ohf-theme', next ? 'dark' : 'light');
+      } catch {
+        // Ignore storage errors in restricted environments
+      }
+      return next;
+    });
+  };
 
   const handleOpenDonate = () => {
     setDonateOpen(true);
@@ -33,9 +71,9 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFFDF9] text-[#1E293B] antialiased selection:bg-[#C51E2E] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FFFDF9] dark:bg-[#0A192F] text-[#1E293B] dark:text-[#CBD5E1] antialiased selection:bg-[#C51E2E] dark:selection:bg-[#E84C3D] selection:text-white transition-colors duration-200">
       {/* Navigation */}
-      <Navbar onOpenDonate={handleOpenDonate} />
+      <Navbar onOpenDonate={handleOpenDonate} isDark={isDark} onToggleTheme={handleToggleTheme} />
 
       {/* Main Content Sections */}
       <main className="flex-1">

@@ -16,18 +16,18 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#FFFDF9] relative">
+    <section id="contact" className="py-20 md:py-28 bg-[#FFFDF9] dark:bg-[#0A192F] relative border-t border-transparent dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-rose-100 text-[#C51E2E]">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-rose-100 dark:bg-[#E84C3D]/15 text-[#C51E2E] dark:text-[#F05A4B]">
             Connect With Us
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A192F] tracking-tight font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A192F] dark:text-[#F8FAFC] tracking-tight font-heading">
             Get in Touch With Our Team
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-[#CBD5E1] leading-relaxed">
             Have inquiries about our programs, seek civic advice, or wish to recommend an intervention in your locality? We are here to listen and serve.
           </p>
         </div>
@@ -35,7 +35,7 @@ export const Contact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Direct Info Card */}
-          <div className="lg:col-span-5 bg-[#0A192F] text-white rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-5 bg-[#0A192F] dark:bg-[#112240] text-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-transparent dark:border-white/10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#C51E2E]/20 rounded-full blur-3xl pointer-events-none" />
             
             <div className="space-y-6 relative">
@@ -108,33 +108,33 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7 bg-[#FAF7F2] rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-lg">
+          <div className="lg:col-span-7 bg-[#FAF7F2] dark:bg-[#112240] rounded-3xl p-8 sm:p-10 border border-slate-200/80 dark:border-white/10 shadow-lg dark:shadow-black/30">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-[#0A192F] font-heading">
+              <h3 className="text-2xl font-bold text-[#0A192F] dark:text-[#F8FAFC] font-heading">
                 Send Us a Message
               </h3>
-              <p className="text-slate-600 text-sm mt-1">
+              <p className="text-slate-600 dark:text-[#94A3B8] text-sm mt-1">
                 Fill in the details below and our secretarial desk will respond within 24 hours.
               </p>
             </div>
 
             {status === 'success' ? (
-              <div className="p-8 text-center space-y-4 bg-white rounded-2xl border border-emerald-200 shadow-sm animate-in fade-in">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
+              <div className="p-8 text-center space-y-4 bg-white dark:bg-[#1D3557] rounded-2xl border border-emerald-200 dark:border-emerald-500/30 shadow-sm animate-in fade-in">
+                <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h4 className="text-2xl font-bold text-slate-900 font-heading">
+                <h4 className="text-2xl font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
                   Message Sent Successfully!
                 </h4>
-                <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
-                  Thank you, <strong className="text-slate-900">{formData.name}</strong>. Your correspondence has been routed to our correspondence team at <strong className="text-slate-900">info@ochesheartfoundation.org</strong>.
+                <p className="text-slate-600 dark:text-[#CBD5E1] text-sm max-w-md mx-auto leading-relaxed">
+                  Thank you, <strong className="text-slate-900 dark:text-[#F8FAFC]">{formData.name}</strong>. Your correspondence has been routed to our correspondence team at <strong className="text-slate-900 dark:text-[#F8FAFC]">info@ochesheartfoundation.org</strong>.
                 </p>
                 <button
                   onClick={() => {
                     setStatus('idle');
                     setFormData({ name: '', email: '', subject: '', message: '' });
                   }}
-                  className="px-6 py-2.5 bg-[#0A192F] text-white text-sm font-semibold rounded-xl hover:bg-slate-800 transition-colors shadow-xs"
+                  className="px-6 py-2.5 bg-[#0A192F] dark:bg-[#E84C3D] text-white text-sm font-semibold rounded-xl hover:bg-slate-800 dark:hover:bg-[#F05A4B] transition-colors shadow-xs cursor-pointer"
                 >
                   Send Another Message
                 </button>
@@ -143,7 +143,7 @@ export const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1.5">
                       Your Full Name *
                     </label>
                     <input
@@ -152,12 +152,12 @@ export const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Oche Emmanuel"
-                      className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white transition-all"
+                      className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8] transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1.5">
                       Your Email Address *
                     </label>
                     <input
@@ -166,13 +166,13 @@ export const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. oche@example.org"
-                      className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white transition-all"
+                      className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8] transition-all"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1.5">
                     Subject / Area of Inquiry
                   </label>
                   <input
@@ -180,12 +180,12 @@ export const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder="e.g. Humanitarian outreach in Benue community / Civic workshop"
-                    className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white transition-all"
+                    className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8] transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1.5">
                     Message *
                   </label>
                   <textarea
@@ -194,14 +194,14 @@ export const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Write your message or inquiry here..."
-                    className="w-full p-4 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white transition-all resize-none"
+                    className="w-full p-4 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8] transition-all resize-none"
                   ></textarea>
                 </div>
 
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold bg-[#C51E2E] hover:bg-[#991321] text-white text-sm shadow-lg shadow-rose-900/20 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold bg-[#C51E2E] hover:bg-[#991321] dark:bg-[#E84C3D] dark:hover:bg-[#F05A4B] text-white text-sm shadow-lg shadow-rose-900/20 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send Message</span>

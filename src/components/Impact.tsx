@@ -126,7 +126,7 @@ export const Impact: React.FC<ImpactProps> = ({ onOpenDonate }) => {
               <div className="pt-4">
                 <button
                   onClick={onOpenDonate}
-                  className="px-6 py-3 rounded-xl bg-[#D97706] hover:bg-[#B45309] text-white font-bold text-sm shadow-lg transition-colors flex items-center gap-2"
+                  className="px-6 py-3 rounded-xl bg-[#D97706] hover:bg-[#B45309] dark:bg-[#E84C3D] dark:hover:bg-[#F05A4B] text-white font-bold text-sm shadow-lg transition-colors flex items-center gap-2 cursor-pointer"
                 >
                   <Heart className="w-4 h-4 fill-white" />
                   <span>Support Our Impact</span>

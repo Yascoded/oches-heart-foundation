@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDonate, onOpenVolunteer })
   ];
 
   return (
-    <footer className="bg-[#060F1E] text-white pt-16 pb-12 border-t border-slate-800">
+    <footer className="bg-[#060F1E] text-white pt-16 pb-12 border-t border-slate-800 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
@@ -179,7 +179,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDonate, onOpenVolunteer })
             <div className="pt-2 flex flex-col sm:flex-row lg:flex-col gap-2">
               <button
                 onClick={onOpenDonate}
-                className="w-full py-2.5 px-4 rounded-xl font-bold bg-[#D97706] hover:bg-[#B45309] text-white text-xs sm:text-sm shadow-md transition-colors flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-4 rounded-xl font-bold bg-[#D97706] hover:bg-[#B45309] dark:bg-[#E84C3D] dark:hover:bg-[#F05A4B] text-white text-xs sm:text-sm shadow-md transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Heart className="w-4 h-4 fill-white" />
                 <span>Make a Donation</span>

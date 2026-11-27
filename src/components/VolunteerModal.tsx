@@ -35,7 +35,7 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-lg bg-[#FFFDF9] rounded-3xl shadow-2xl border border-slate-200 overflow-hidden text-[#1E293B] max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-lg bg-[#FFFDF9] dark:bg-[#112240] rounded-3xl shadow-2xl border border-slate-200 dark:border-white/10 overflow-hidden text-[#1E293B] dark:text-[#CBD5E1] max-h-[90vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -72,19 +72,19 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
         <div className="p-6 overflow-y-auto space-y-5">
           {submitted ? (
             <div className="py-8 text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 mx-auto flex items-center justify-center">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
-              <h4 className="text-2xl font-bold text-slate-900 font-heading">
+              <h4 className="text-2xl font-bold text-slate-900 dark:text-[#F8FAFC] font-heading">
                 Thank You, {formData.name || 'Friend'}!
               </h4>
-              <p className="text-slate-600 text-sm max-w-sm mx-auto leading-relaxed">
-                Your application to {isPartner ? 'partner with' : 'volunteer for'} Oche's Heart Foundation has been received. Our community coordinator will reach out to you at <span className="font-semibold text-slate-900">{formData.email}</span> shortly.
+              <p className="text-slate-600 dark:text-[#CBD5E1] text-sm max-w-sm mx-auto leading-relaxed">
+                Your application to {isPartner ? 'partner with' : 'volunteer for'} Oche's Heart Foundation has been received. Our community coordinator will reach out to you at <span className="font-semibold text-slate-900 dark:text-[#F8FAFC]">{formData.email}</span> shortly.
               </p>
               <div className="pt-4">
                 <button
                   onClick={handleResetAndClose}
-                  className="px-6 py-2.5 bg-[#C51E2E] hover:bg-[#991321] text-white font-medium rounded-xl text-sm transition-colors shadow-md"
+                  className="px-6 py-2.5 bg-[#C51E2E] hover:bg-[#991321] dark:bg-[#E84C3D] dark:hover:bg-[#F05A4B] text-white font-medium rounded-xl text-sm transition-colors shadow-md cursor-pointer"
                 >
                   Done
                 </button>
@@ -93,48 +93,48 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1">
                   {isPartner ? 'Organization / Representative Name' : 'Full Name'} *
                 </label>
                 <div className="relative">
-                  <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                  <User className="w-4 h-4 text-slate-400 dark:text-[#94A3B8] absolute left-3.5 top-3.5" />
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder={isPartner ? 'e.g. Civic Action Initiative' : 'e.g. John Doe'}
-                    className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white"
+                    className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8]"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1">Email Address *</label>
                   <div className="relative">
-                    <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                    <Mail className="w-4 h-4 text-slate-400 dark:text-[#94A3B8] absolute left-3.5 top-3.5" />
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="you@domain.org"
-                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white"
+                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Phone Number</label>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1">Phone Number</label>
                   <div className="relative">
-                    <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                    <Phone className="w-4 h-4 text-slate-400 dark:text-[#94A3B8] absolute left-3.5 top-3.5" />
                     <input
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+234 ..."
-                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white"
+                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8]"
                     />
                   </div>
                 </div>
@@ -142,25 +142,25 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">City / State</label>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1">City / State</label>
                   <div className="relative">
-                    <MapPin className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                    <MapPin className="w-4 h-4 text-slate-400 dark:text-[#94A3B8] absolute left-3.5 top-3.5" />
                     <input
                       type="text"
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                       placeholder="e.g. Abuja, Benue, Lagos"
-                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white"
+                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Primary Area of Interest</label>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1">Primary Area of Interest</label>
                   <select
                     value={formData.interest}
                     onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                    className="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white"
+                    className="w-full px-3 py-2.5 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC]"
                   >
                     <option value="Humanitarian Services">Humanitarian Services</option>
                     <option value="Democracy and Governance">Democracy & Governance</option>
@@ -173,7 +173,7 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                <label className="block text-xs font-semibold text-slate-700 dark:text-[#CBD5E1] mb-1">
                   {isPartner ? 'Tell us how you would like to collaborate' : 'Briefly tell us how you would like to help'}
                 </label>
                 <textarea
@@ -181,7 +181,7 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder={isPartner ? 'Describe your organization and proposed joint initiative...' : 'Any previous experience, skills, or available hours...'}
-                  className="w-full p-3 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] bg-white resize-none"
+                  className="w-full p-3 text-sm rounded-xl border border-slate-300 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-[#C51E2E] dark:focus:ring-[#E84C3D] bg-white dark:bg-[#1D3557] text-slate-900 dark:text-[#F8FAFC] placeholder:text-slate-400 dark:placeholder:text-[#94A3B8] resize-none"
                 ></textarea>
               </div>
 
@@ -189,13 +189,13 @@ export const VolunteerModal: React.FC<VolunteerModalProps> = ({ isOpen, onClose,
                 <button
                   type="button"
                   onClick={handleResetAndClose}
-                  className="w-1/3 py-2.5 border border-slate-300 rounded-xl text-slate-700 hover:bg-slate-100 font-medium text-sm transition-colors"
+                  className="w-1/3 py-2.5 border border-slate-300 dark:border-white/15 rounded-xl text-slate-700 dark:text-[#CBD5E1] hover:bg-slate-100 dark:hover:bg-[#1D3557] font-medium text-sm transition-colors cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="w-2/3 py-2.5 bg-[#C51E2E] hover:bg-[#991321] text-white font-semibold rounded-xl text-sm transition-colors shadow-md"
+                  className="w-2/3 py-2.5 bg-[#C51E2E] hover:bg-[#991321] dark:bg-[#E84C3D] dark:hover:bg-[#F05A4B] text-white font-semibold rounded-xl text-sm transition-colors shadow-md cursor-pointer"
                 >
                   {isPartner ? 'Submit Proposal' : 'Register as Volunteer'}
                 </button>
